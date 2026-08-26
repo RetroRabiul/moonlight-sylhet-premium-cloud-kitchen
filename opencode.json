@@ -1,0 +1,23 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "minimax": {
+      "api": "openai",
+      "options": {
+        "apiKey": "sk-cp-CvgQVpHQLnaSLYEhLXDDMNFsm-fDM5_aEcUs0zz_3PiiTReo3iMe0rqci60zrnOYXhorI2zegECc7hlhj_gMLRIIDzwSKJvBNX8YeWz-vndZzmmM1t8Wkhk",
+        "baseURL": "https://api.minimaxi.com/v1"
+      }
+    }
+  },
+  "model": "minimax/MiniMax-M3",
+  "mcp": {
+    "minimax": {
+      "type": "local",
+      "command": ["npx", "-y", "my-minimax-mcp"],
+      "environment": {
+        "MINIMAX_API_KEY": "sk-cp-CvgQVpHQLnaSLYEhLXDDMNFsm-fDM5_aEcUs0zz_3PiiTReo3iMe0rqci60zrnOYXhorI2zegECc7hlhj_gMLRIIDzwSKJvBNX8YeWz-vndZzmmM1t8Wkhk",
+        "MINIMAX_DEFAULT_MODEL": "MiniMax-M3"
+      }
+    }
+  }
+}

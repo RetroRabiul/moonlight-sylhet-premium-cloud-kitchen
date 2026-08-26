@@ -1,0 +1,6 @@
+{
+  "name": "NightFuel Sylhet - Premium Cloud Kitchen",
+  "description": "Late-night food delivery, interactive menu gallery, real-time live order tracking, loyalty rewards, digital wallets (bKash/Nagad), staff kitchen dashboard, inventory control, and multi-language support.",
+  "requestFramePermissions": ["geolocation", "notifications"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

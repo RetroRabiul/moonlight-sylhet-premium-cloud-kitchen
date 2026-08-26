@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #000000;
+    color: #f8fafc;
+    overflow-x: hidden;
+  }
+
+  .font-brand {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-luxury {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* Minimalist Clean Dark Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
+
+.clean-card {
+  background-color: #000000;
+  border: 1px solid #262626;
+}
+
+.clean-card:hover {
+  border-color: #404040;
+}
+
