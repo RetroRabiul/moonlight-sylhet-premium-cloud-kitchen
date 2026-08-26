@@ -89,7 +89,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, defaultMo
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={handleClose} />
 
       {/* Modal */}
-      <div className="relative w-full max-w-md bg-black border border-neutral-800 rounded-2xl shadow-2xl p-6 sm:p-8 animate-in fade-in zoom-in-95 duration-200">
+      <div className="relative w-full max-w-md bg-black border border-neutral-800 rounded-2xl shadow-2xl px-6 py-8 sm:px-8 animate-in fade-in zoom-in-95 duration-200">
         {/* Close Button */}
         <button
           onClick={handleClose}
@@ -107,7 +107,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, defaultMo
               ? (language === 'bn' ? 'অ্যাকাউন্ট তৈরি করুন' : 'Create Account')
               : (language === 'bn' ? 'পাসওয়ার্ড রিসেট' : 'Reset Password')}
           </h2>
-          <p className="text-xs text-neutral-400 mt-1">
+          <p className="text-xs text-neutral-400 mt-1.5">
             {mode === 'login'
               ? (language === 'bn' ? 'আপনার MoonLight অ্যাকাউন্টে প্রবেশ করুন' : 'Sign in to your MoonLight account')
               : mode === 'signup'
@@ -131,35 +131,35 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, defaultMo
         )}
 
         {/* Email/Password Form */}
-        <form onSubmit={handleEmailAuth} className="space-y-3">
+        <form onSubmit={handleEmailAuth} className="space-y-3.5">
           {mode === 'signup' && (
             <div className="relative">
-              <UserIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-500" />
+              <UserIcon className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-500" />
               <input
                 type="text"
                 value={displayName}
                 onChange={(e) => setDisplayName(e.target.value)}
                 placeholder={language === 'bn' ? 'আপনার নাম' : 'Your name'}
-                className="w-full pl-10 pr-4 py-2.5 bg-neutral-900 border border-neutral-800 rounded-xl text-white text-sm placeholder:text-neutral-500 focus:outline-none focus:border-neutral-600 transition-colors"
+                className="w-full pl-11 pr-4 py-3 bg-neutral-900 border border-neutral-800 rounded-xl text-white text-sm placeholder:text-neutral-500 focus:outline-none focus:border-neutral-600 transition-colors"
               />
             </div>
           )}
 
           <div className="relative">
-            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-500" />
+            <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-500" />
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder={language === 'bn' ? 'ইমেইল ঠিকানা' : 'Email address'}
               required
-              className="w-full pl-10 pr-4 py-2.5 bg-neutral-900 border border-neutral-800 rounded-xl text-white text-sm placeholder:text-neutral-500 focus:outline-none focus:border-neutral-600 transition-colors"
+              className="w-full pl-11 pr-4 py-3 bg-neutral-900 border border-neutral-800 rounded-xl text-white text-sm placeholder:text-neutral-500 focus:outline-none focus:border-neutral-600 transition-colors"
             />
           </div>
 
           {mode !== 'reset' && (
             <div className="relative">
-              <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-500" />
+              <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-500" />
               <input
                 type={showPassword ? 'text' : 'password'}
                 value={password}
@@ -167,12 +167,12 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, defaultMo
                 placeholder={language === 'bn' ? 'পাসওয়ার্ড' : 'Password'}
                 required
                 minLength={6}
-                className="w-full pl-10 pr-10 py-2.5 bg-neutral-900 border border-neutral-800 rounded-xl text-white text-sm placeholder:text-neutral-500 focus:outline-none focus:border-neutral-600 transition-colors"
+                className="w-full pl-11 pr-11 py-3 bg-neutral-900 border border-neutral-800 rounded-xl text-white text-sm placeholder:text-neutral-500 focus:outline-none focus:border-neutral-600 transition-colors"
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-500 hover:text-neutral-300"
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-neutral-500 hover:text-neutral-300"
               >
                 {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
@@ -180,19 +180,21 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, defaultMo
           )}
 
           {mode === 'login' && (
-            <button
-              type="button"
-              onClick={() => { setMode('reset'); setError(''); setSuccess(''); }}
-              className="text-xs text-neutral-400 hover:text-white transition-colors"
-            >
-              {language === 'bn' ? 'পাসওয়ার্ড ভুলে গেছেন?' : 'Forgot password?'}
-            </button>
+            <div className="flex justify-end">
+              <button
+                type="button"
+                onClick={() => { setMode('reset'); setError(''); setSuccess(''); }}
+                className="text-xs text-neutral-400 hover:text-white transition-colors"
+              >
+                {language === 'bn' ? 'পাসওয়ার্ড ভুলে গেছেন?' : 'Forgot password?'}
+              </button>
+            </div>
           )}
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-white hover:bg-neutral-200 text-black font-bold text-sm transition-colors disabled:opacity-50"
+            className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white hover:bg-neutral-200 text-black font-bold text-sm transition-colors disabled:opacity-50"
           >
             {loading && <Loader2 className="w-4 h-4 animate-spin" />}
             {mode === 'login'
@@ -204,7 +206,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, defaultMo
         </form>
 
         {/* Toggle Mode */}
-        <div className="text-center mt-5">
+        <div className="text-center mt-5 pt-4 border-t border-neutral-800">
           {mode === 'reset' ? (
             <button
               onClick={() => { setMode('login'); setError(''); setSuccess(''); }}
