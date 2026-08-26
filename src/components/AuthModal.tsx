@@ -84,12 +84,12 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, defaultMo
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" style={{ margin: 0 }}>
       {/* Backdrop */}
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={handleClose} />
 
       {/* Modal */}
-      <div className="relative w-full max-w-md bg-black border border-neutral-800 rounded-2xl shadow-2xl px-6 py-8 sm:px-8 animate-in fade-in zoom-in-95 duration-200">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md bg-black border border-neutral-800 rounded-2xl shadow-2xl px-6 py-8 sm:px-8 animate-in fade-in zoom-in-95 duration-200">
         {/* Close Button */}
         <button
           onClick={handleClose}
