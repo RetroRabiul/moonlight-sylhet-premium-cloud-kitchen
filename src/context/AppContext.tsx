@@ -13,7 +13,6 @@ import {
   AppTheme,
   ActiveTab,
   MenuItemOption,
-  PizzaSizeOption
 } from '../types';
 import {
   INITIAL_MENU_ITEMS,
@@ -22,7 +21,8 @@ import {
   INITIAL_PROMOS,
   INITIAL_REVIEWS,
   INITIAL_LOYALTY,
-  INITIAL_NOTIFICATIONS
+  INITIAL_NOTIFICATIONS,
+  SYLHET_AREAS
 } from '../data/initialData';
 import confetti from 'canvas-confetti';
 
@@ -173,6 +173,16 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     localStorage.setItem('moonlight_orders', JSON.stringify(orders));
   }, [orders]);
 
+  // Sync activeOrder when orders change
+  useEffect(() => {
+    if (activeOrder) {
+      const updated = orders.find((o) => o.id === activeOrder.id);
+      if (updated) {
+        setActiveOrder(updated);
+      }
+    }
+  }, [orders]);
+
   useEffect(() => {
     localStorage.setItem('moonlight_inventory', JSON.stringify(inventory));
   }, [inventory]);
@@ -301,13 +311,6 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     });
 
     playSoundEffect('beep');
-    sendPushNotification(
-      `Added to Cart 🛒`,
-      `${item.name} (${quantity}x) added to your late-night bag.`,
-      'system',
-      `কার্টে যোগ করা হয়েছে 🛒`,
-      `${item.bengaliName} (${quantity}x) কার্টে যুক্ত হয়েছে।`
-    );
   };
 
   const removeFromCart = (cartItemId: string) => {
@@ -374,7 +377,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     transactionId?: string;
     tip?: number;
   }) => {
-    const deliveryFee = payload.area.toLowerCase().includes('akhalia') || payload.area.toLowerCase().includes('tilagarh') ? 60 : 40;
+    const deliveryFee = SYLHET_AREAS.find((a) => a.name === payload.area)?.deliveryFee || 40;
     const tip = payload.tip || 0;
     const finalTotal = cartTotal + deliveryFee + tip;
     const pointsEarned = Math.floor(finalTotal / 10);
@@ -512,17 +515,11 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
           return step;
         });
 
-        const updatedOrder: Order = {
+        return {
           ...ord,
           status: newStatus,
           timeline: updatedTimeline,
         };
-
-        if (activeOrder && activeOrder.id === orderId) {
-          setActiveOrder(updatedOrder);
-        }
-
-        return updatedOrder;
       })
     );
 

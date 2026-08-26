@@ -14,8 +14,6 @@ import {
   Receipt,
   RotateCcw,
   Navigation,
-  Flame,
-  ShieldCheck,
   Check
 } from 'lucide-react';
 import confetti from 'canvas-confetti';

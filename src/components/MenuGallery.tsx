@@ -10,12 +10,7 @@ import {
   Clock,
   Plus,
   SlidersHorizontal,
-  Star,
-  Info,
-  Pizza,
-  Sandwich,
-  Drumstick,
-  Soup
+  Star
 } from 'lucide-react';
 
 export const MenuGallery: React.FC = () => {

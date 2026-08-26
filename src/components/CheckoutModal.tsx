@@ -8,12 +8,8 @@ import {
   Banknote,
   Smartphone,
   CheckCircle2,
-  Lock,
   ArrowRight,
-  ArrowLeft,
-  MapPin,
-  Clock,
-  Phone
+  MapPin
 } from 'lucide-react';
 
 export const CheckoutModal: React.FC = () => {
@@ -42,9 +38,7 @@ export const CheckoutModal: React.FC = () => {
 
   // Digital Wallet Simulation states
   const [walletPhone, setWalletPhone] = useState('01712345678');
-  const [walletOtp, setWalletOtp] = useState('123456');
   const [walletPin, setWalletPin] = useState('•••••');
-  const [walletStep, setWalletStep] = useState<'details' | 'otp' | 'pin'>('details');
   const [isProcessing, setIsProcessing] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
 

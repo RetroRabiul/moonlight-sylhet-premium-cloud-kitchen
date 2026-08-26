@@ -9,8 +9,6 @@ import {
   Copy,
   Check,
   Zap,
-  Volume2,
-  Share2,
   ArrowRight
 } from 'lucide-react';
 

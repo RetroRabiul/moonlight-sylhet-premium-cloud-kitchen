@@ -1,6 +1,6 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
-import { Flame, Clock, ShieldCheck, Sparkles, Phone, ArrowRight, Zap, MapPin, Facebook } from 'lucide-react';
+import { Flame, Clock, ShieldCheck, Phone, ArrowRight, Zap, Facebook } from 'lucide-react';
 
 export const HeroBanner: React.FC = () => {
   const { language, setActiveTab, promos, applyPromo, setIsCartOpen } = useApp();

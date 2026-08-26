@@ -4,15 +4,11 @@ import { ReviewItem } from '../types';
 import {
   Star,
   MessageSquare,
-  ThumbsUp,
-  Flame,
-  Clock,
   Sparkles,
   CheckCircle2,
   Send,
   ShieldCheck
 } from 'lucide-react';
-import confetti from 'canvas-confetti';
 
 export const ReviewsView: React.FC = () => {
   const { reviews, addReview, menuItems, language } = useApp();
@@ -37,7 +33,6 @@ export const ReviewsView: React.FC = () => {
       verifiedOrder: true,
     });
 
-    confetti({ particleCount: 60, spread: 60 });
     setSubmitted(true);
     setName('');
     setComment('');

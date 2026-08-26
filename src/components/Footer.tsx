@@ -1,13 +1,11 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
 import {
-  Flame,
   Phone,
   MapPin,
   Clock,
   Facebook,
   ShieldCheck,
-  Heart,
   ExternalLink
 } from 'lucide-react';
 import { SYLHET_AREAS } from '../data/initialData';

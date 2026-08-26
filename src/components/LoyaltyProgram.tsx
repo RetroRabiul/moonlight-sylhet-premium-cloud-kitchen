@@ -3,7 +3,6 @@ import { useApp } from '../context/AppContext';
 import {
   Award,
   Sparkles,
-  Flame,
   Gift,
   Ticket,
   CheckCircle2,

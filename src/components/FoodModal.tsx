@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MenuItem, MenuItemOption, PizzaSizeOption } from '../types';
 import { useApp } from '../context/AppContext';
-import { X, Flame, Clock, Plus, Minus, Check, Sparkles, ShieldAlert } from 'lucide-react';
+import { X, Flame, Clock, Plus, Minus, Check, Sparkles } from 'lucide-react';
 
 interface FoodModalProps {
   item: MenuItem | null;

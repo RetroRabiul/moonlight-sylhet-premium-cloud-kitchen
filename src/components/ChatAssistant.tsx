@@ -5,13 +5,7 @@ import {
   X,
   Send,
   Sparkles,
-  Bot,
-  User,
-  Flame,
-  Clock,
-  Phone,
-  ArrowRight,
-  Minimize2
+  Bot
 } from 'lucide-react';
 
 interface ChatMessage {

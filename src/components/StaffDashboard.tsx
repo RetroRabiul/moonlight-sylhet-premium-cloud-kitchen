@@ -38,7 +38,7 @@ export const StaffDashboard: React.FC = () => {
 
   const analytics = ANALYTICS_DATA;
 
-  const [activeTab, setActiveTab] = useState<'orders' | 'inventory' | 'analytics'>('orders');
+  const [staffSubTab, setStaffSubTab] = useState<'orders' | 'inventory' | 'analytics'>('orders');
   const [orderStatusFilter, setOrderStatusFilter] = useState<string>('all');
   const [inventorySearch, setInventorySearch] = useState('');
 
@@ -74,10 +74,10 @@ export const StaffDashboard: React.FC = () => {
         {/* Sub Navigation Tabs */}
         <div className="flex items-center gap-1.5 p-1 rounded-2xl bg-black border border-neutral-800">
           <button
-            onClick={() => setActiveTab('orders')}
+            onClick={() => setStaffSubTab('orders')}
             id="tab-kds-orders"
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
-              activeTab === 'orders'
+              staffSubTab === 'orders'
                 ? 'bg-white text-black shadow font-bold'
                 : 'text-neutral-400 hover:text-white'
             }`}
@@ -87,10 +87,10 @@ export const StaffDashboard: React.FC = () => {
           </button>
 
           <button
-            onClick={() => setActiveTab('inventory')}
+            onClick={() => setStaffSubTab('inventory')}
             id="tab-inventory"
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
-              activeTab === 'inventory'
+              staffSubTab === 'inventory'
                 ? 'bg-white text-black shadow font-bold'
                 : 'text-neutral-400 hover:text-white'
             }`}
@@ -100,10 +100,10 @@ export const StaffDashboard: React.FC = () => {
           </button>
 
           <button
-            onClick={() => setActiveTab('analytics')}
+            onClick={() => setStaffSubTab('analytics')}
             id="tab-analytics"
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
-              activeTab === 'analytics'
+              staffSubTab === 'analytics'
                 ? 'bg-white text-black shadow font-bold'
                 : 'text-neutral-400 hover:text-white'
             }`}
@@ -161,7 +161,7 @@ export const StaffDashboard: React.FC = () => {
       </div>
 
       {/* VIEW 1: KITCHEN DISPLAY SYSTEM & ORDER MANAGER */}
-      {activeTab === 'orders' && (
+      {staffSubTab === 'orders' && (
         <div className="space-y-4">
           {/* Status Filter Bar */}
           <div className="flex items-center gap-2 overflow-x-auto pb-1 text-xs">
@@ -329,7 +329,7 @@ export const StaffDashboard: React.FC = () => {
       )}
 
       {/* VIEW 2: COMPREHENSIVE INVENTORY MANAGEMENT */}
-      {activeTab === 'inventory' && (
+      {staffSubTab === 'inventory' && (
         <div className="space-y-4">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="relative w-full sm:w-72">
@@ -424,7 +424,7 @@ export const StaffDashboard: React.FC = () => {
       )}
 
       {/* VIEW 3: DATA ANALYTICS PANEL FOR RESTAURANT OWNERS */}
-      {activeTab === 'analytics' && (
+      {staffSubTab === 'analytics' && (
         <div className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Top Selling Dishes */}
