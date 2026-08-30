@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from '../../assets/logo.png';
 import { useApp } from '../context/AppContext';
 import { useAuth } from '../context/AuthContext';
 import { AuthModal } from './AuthModal';
@@ -124,6 +125,11 @@ export const Navbar: React.FC = () => {
             className="flex items-center gap-3 text-left focus:outline-none group"
             id="brand-logo-button"
           >
+            <img
+              src={logo}
+              alt="MOONLIGHT logo"
+              className="w-10 h-10 rounded-full object-cover ring-1 ring-neutral-700"
+            />
             <div className="flex flex-col">
               <span className="font-bold text-lg sm:text-xl text-white tracking-wider">MOONLIGHT</span>
               <span className="text-[9px] uppercase font-bold text-slate-200 tracking-[0.25em] -mt-0.5">Premium Cloud Kitchen</span>
