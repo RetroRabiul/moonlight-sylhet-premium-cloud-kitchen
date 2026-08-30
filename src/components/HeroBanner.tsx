@@ -31,7 +31,7 @@ export const HeroBanner: React.FC = () => {
               </>
             ) : (
               <>
-                Fuel Your Midnight Cravings with{' '}
+                Where the Moon Lights Up Every Bite, with{' '}
                 <span className="text-amber-400 font-extrabold">MOONLIGHT</span>
               </>
             )}
