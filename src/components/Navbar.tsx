@@ -94,7 +94,7 @@ export const Navbar: React.FC = () => {
             id="nav-hotline-link"
           >
             <Phone className="w-3.5 h-3.5 text-neutral-400" />
-            <span className="hidden sm:inline">+880 1324993344</span>
+            <span className="hidden sm:inline">+880 1912345678</span>
             <span className="sm:hidden">Call</span>
           </a>
 

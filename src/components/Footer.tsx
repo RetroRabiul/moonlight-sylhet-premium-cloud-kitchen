@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
                 className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-black border border-neutral-800 text-white font-bold text-xs hover:border-neutral-700 transition-colors"
               >
                 <Phone className="w-3.5 h-3.5 text-neutral-300" />
-                <span>+880 1324993344</span>
+                <span>+880 1912345678</span>
               </a>
             </div>
           </div>
@@ -156,7 +156,7 @@ export const Footer: React.FC = () => {
               <ExternalLink className="w-3 h-3 text-neutral-400" />
             </a>
             <span>•</span>
-            <span className="text-neutral-400">Hotline: +880 1324993344</span>
+            <span className="text-neutral-400">Hotline: +880 1912345678</span>
           </div>
         </div>
       </div>

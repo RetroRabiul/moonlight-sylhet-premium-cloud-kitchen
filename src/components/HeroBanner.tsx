@@ -93,7 +93,7 @@ export const HeroBanner: React.FC = () => {
               id="hero-call-btn"
             >
               <Phone className="w-4 h-4 text-neutral-400" />
-              <span>+880 1324993344</span>
+              <span>+880 1912345678</span>
             </a>
 
             <a
