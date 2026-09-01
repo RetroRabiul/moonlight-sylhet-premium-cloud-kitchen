@@ -305,7 +305,7 @@ export const CheckoutModal: React.FC = () => {
                     </span>
                   </div>
                   <span className="text-[11px] text-neutral-400">
-                    Merchant: <strong className="text-white font-mono">01324993344</strong>
+                    Merchant: <strong className="text-white font-mono">01912345678</strong>
                   </span>
                 </div>
 

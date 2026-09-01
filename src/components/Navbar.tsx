@@ -89,7 +89,7 @@ export const Navbar: React.FC = () => {
 
         <div className="flex items-center gap-4 text-xs">
           <a
-            href="tel:+8801324993344"
+            href="tel:+8801912345678"
             className="flex items-center gap-1.5 text-neutral-300 hover:text-white font-semibold transition-colors"
             id="nav-hotline-link"
           >

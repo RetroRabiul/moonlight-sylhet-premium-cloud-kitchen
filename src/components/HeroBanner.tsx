@@ -88,7 +88,7 @@ export const HeroBanner: React.FC = () => {
             </a>
 
             <a
-              href="tel:+8801324993344"
+              href="tel:+8801912345678"
               className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-black hover:bg-neutral-900 border border-neutral-800 text-white font-semibold text-sm transition-colors"
               id="hero-call-btn"
             >

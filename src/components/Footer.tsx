@@ -44,7 +44,7 @@ export const Footer: React.FC = () => {
               </a>
 
               <a
-                href="tel:+8801324993344"
+                href="tel:+8801912345678"
                 className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-black border border-neutral-800 text-white font-bold text-xs hover:border-neutral-700 transition-colors"
               >
                 <Phone className="w-3.5 h-3.5 text-neutral-300" />
