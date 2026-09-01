@@ -460,7 +460,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     setActiveOrder(newOrder);
     clearCart();
     setIsCheckoutOpen(false);
-    setActiveTab('tracking');
+    setActiveTab('menu');
 
     // Update Loyalty Points
     setLoyalty((prev) => {

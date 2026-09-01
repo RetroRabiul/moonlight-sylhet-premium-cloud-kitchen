@@ -20,7 +20,6 @@ import {
   Package,
   Layers,
   Sparkles,
-  MapPin,
   Tag,
   Star,
   Check,
@@ -61,7 +60,6 @@ export const Navbar: React.FC = () => {
 
   const navItems: { id: ActiveTab; label: string; bengaliLabel: string; icon: any }[] = [
     { id: 'menu', label: 'Menu', bengaliLabel: 'মেনু', icon: Flame },
-    { id: 'tracking', label: 'Live Track', bengaliLabel: 'লাইভ ট্র্যাকিং', icon: MapPin },
     { id: 'promos', label: 'Midnight Deals', bengaliLabel: 'অফার ও ডিল', icon: Tag },
     { id: 'loyalty', label: 'Fuel Rewards', bengaliLabel: 'ফুয়েল রিওয়ার্ডস', icon: Award },
     { id: 'reviews', label: 'Reviews', bengaliLabel: 'রিভিউ', icon: Star },
@@ -128,7 +126,7 @@ export const Navbar: React.FC = () => {
             <img
               src={logo}
               alt="MOONLIGHT logo"
-              className="w-10 h-10 rounded-full object-cover ring-1 ring-neutral-700"
+              className="w-10 h-10 rounded-full object-cover"
             />
             <div className="flex flex-col">
               <span className="font-bold text-lg sm:text-xl text-white tracking-wider">MOONLIGHT</span>

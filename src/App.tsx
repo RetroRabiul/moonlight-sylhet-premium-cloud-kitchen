@@ -4,14 +4,12 @@ import { AuthProvider } from './context/AuthContext';
 import { Navbar } from './components/Navbar';
 import { HeroBanner } from './components/HeroBanner';
 import { MenuGallery } from './components/MenuGallery';
-import { LiveTracker } from './components/LiveTracker';
 import { LoyaltyProgram } from './components/LoyaltyProgram';
 import { PromosView } from './components/PromosView';
 import { ReviewsView } from './components/ReviewsView';
 import { StaffDashboard } from './components/StaffDashboard';
 import { CartDrawer } from './components/CartDrawer';
 import { CheckoutModal } from './components/CheckoutModal';
-import { ChatAssistant } from './components/ChatAssistant';
 import { Footer } from './components/Footer';
 
 const MainContent: React.FC = () => {
@@ -31,8 +29,6 @@ const MainContent: React.FC = () => {
           </div>
         )}
 
-        {activeTab === 'tracking' && <LiveTracker />}
-
         {activeTab === 'loyalty' && <LoyaltyProgram />}
 
         {activeTab === 'promos' && <PromosView />}
@@ -49,9 +45,6 @@ const MainContent: React.FC = () => {
 
       {/* Interactive Digital Wallet Checkout Modal */}
       <CheckoutModal />
-
-      {/* AI Midnight Food Concierge Chatbot */}
-      <ChatAssistant />
 
       {/* Footer */}
       <Footer />

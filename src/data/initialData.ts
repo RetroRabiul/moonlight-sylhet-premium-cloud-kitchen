@@ -895,12 +895,12 @@ export const INITIAL_NOTIFICATIONS: NotificationMessage[] = [
     id: 'nt-2',
     title: '🛵 Order NF-8921 Dispatched',
     bengaliTitle: '🛵 অর্ডার NF-8921 বের হয়েছে',
-    message: 'Rider Rashedul is navigating to Shibgonj. Track live location on map.',
-    bengaliMessage: 'রাইডার রাশেদুল শিবগঞ্জের পথে আছেন। ম্যাপে লাইভ ট্র্যাক করুন।',
+    message: 'Rider Rashedul is navigating to Shibgonj.',
+    bengaliMessage: 'রাইডার রাশেদুল শিবগঞ্জের পথে আছেন।',
     time: '2 min ago',
     type: 'order',
     read: false,
-    linkTab: 'tracking'
+    linkTab: 'menu'
   },
   {
     id: 'nt-3',

@@ -190,7 +190,6 @@ export type AppLanguage = 'en' | 'bn';
 export type AppTheme = 'dark' | 'light';
 export type ActiveTab =
   | 'menu'
-  | 'tracking'
   | 'loyalty'
   | 'reviews'
   | 'promos'
